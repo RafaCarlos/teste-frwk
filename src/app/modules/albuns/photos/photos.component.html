@@ -1,0 +1,18 @@
+<section class="albuns">
+    <div class="container">
+
+        <h1>Fotos</h1>
+
+        <div class="row">
+            <div class="col-lg-3 col-sm-4 col-6" *ngFor="let item of results; let i = index">
+                <figure>
+                    <img src="{{item.url}}" alt="{{item.title}}" class="img-fluid">
+                    <figcaption>{{item.title}}</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <a href="javascript:history.back(1);" mat-raised-button>Voltar</a>
+
+    </div>
+</section>

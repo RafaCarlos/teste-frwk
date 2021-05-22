@@ -1,0 +1,17 @@
+<section class="posts">
+    <div class="container">
+
+        <h1>Todos</h1>
+
+        <mat-nav-list>
+            <mat-list-item *ngFor="let item of results; let i = index">
+                <mat-icon matListIcon *ngIf="item.completed">check_circle</mat-icon>
+                <mat-icon matListIcon *ngIf="!item.completed">cancel</mat-icon>
+                {{item.title}}
+            </mat-list-item>
+        </mat-nav-list>
+
+        <a href="javascript:history.back(1);" mat-raised-button>Voltar</a>
+
+    </div>
+</section>

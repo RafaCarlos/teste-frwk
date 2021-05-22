@@ -1,0 +1,16 @@
+<section class="posts">
+    <div class="container">
+
+        <h1>Posts</h1>
+
+        <mat-nav-list>
+            <mat-list-item *ngFor="let item of results; let i = index">
+                <mat-icon matListIcon>chevron_right</mat-icon>
+                <a matLine color="primary" href="post/{{item.id}}">{{item.title}}</a>
+            </mat-list-item>
+        </mat-nav-list>
+
+        <a href="javascript:history.back(1);" mat-raised-button>Voltar</a>
+
+    </div>
+</section>

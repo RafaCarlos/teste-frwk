@@ -1,0 +1,55 @@
+<section class="post">
+
+    <div class="container" *ngIf="resultPost">
+
+        <h1>{{resultPost.title}}</h1>
+
+        <p>
+            {{resultPost.body}}
+        </p>
+
+        <a href="javascript:history.back(1);" mat-raised-button>Voltar</a>
+
+        <div class="row mt-5">
+            <div class="col-lg-6 col-sm-6 col-12">
+                <h2>Comentários</h2>
+                <p *ngFor="let item of results; let i = index">
+                    <strong>Nome:</strong> {{item.name}} <br>
+                    <strong>E-mail:</strong> {{item.email}} <br>
+                    <strong>Comentário:</strong> <br>
+                    {{item.body}}
+                </p>
+            </div>
+            <div class="col-6">
+                <form [formGroup]="commentForm" novalidate>
+                    <div class="form-group">
+                        <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Nome</mat-label>
+                            <input matInput formControlName="nome">
+                        </mat-form-field>
+                    </div>
+                    <div class="form-group">
+                        <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>E-mail</mat-label>
+                            <input matInput formControlName="email">
+                        </mat-form-field>
+                    </div>
+                    <div class="form-group">
+                        <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Comentário</mat-label>
+                            <textarea matInput formControlName="comentario"></textarea>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <button mat-raised-button color="primary" (click)="save()" [disabled]="commentForm.invalid">Enviar</button>
+                    </div>
+                </form>
+                <div class="mt-5">
+                    {{newComment | json}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,32 @@
+<section class="usuario">
+    <div class="container" *ngIf="results">
+
+        <h1>
+            {{results.name}}
+        </h1>
+
+        <p>
+            <strong>Nome de usuário:</strong> {{results.username}} <br>
+            <strong>E-mail:</strong> {{results.email}} <br>
+            <strong>Endereço:</strong> {{results.address.street}}, {{results.address.suite}} - {{results.address.city}} <br>
+            <strong>Telefone:</strong> {{results.phone}} <br>
+            <strong>Website:</strong> {{results.website}} <br>
+            <strong>Empresa:</strong> {{results.company.name}}
+        </p>
+
+        <ul>
+            <li>
+                <a href="posts/{{results.id}}" mat-raised-button>Ver posts</a>
+            </li>
+            <li>
+                <a href="albuns/{{results.id}}" mat-raised-button color="primary">Ver Albuns</a>
+            </li>
+            <li>
+                <a href="todos/{{results.id}}" mat-raised-button color="accent">Ver todos</a>
+            </li>
+        </ul>
+
+        <a href="javascript:history.back(1);" class="mt-5" mat-raised-button>Voltar</a>
+
+    </div>
+</section>

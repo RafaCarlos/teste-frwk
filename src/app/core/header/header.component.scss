@@ -1,0 +1,28 @@
+header {
+    background-color: #5F3473;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 30px 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    &.scroll {
+        padding: 15px 0;
+    }
+
+    h1 {
+
+        a {
+            background: url('https://frwk.com.br/assets/img/logo.svg') no-repeat;
+            display: block;
+            height: 26px;
+            text-indent: -9999px;
+            width: 180px;
+        }
+    }
+}
